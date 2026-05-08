@@ -37,3 +37,12 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to production server
+      run: echo "Deploying to production server..."
+
+
